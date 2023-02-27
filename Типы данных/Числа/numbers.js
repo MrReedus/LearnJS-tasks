@@ -46,6 +46,10 @@ function randomNum(min, max) {
 
 //****************************************************** */
 
+// Случайное целое число от min до max
+// Напишите функцию randomInteger(min, max), которая генерирует случайное целое (integer) число от min до max (включительно).
+// Любое число из интервала min..max должно появляться с одинаковой вероятностью.
+
 function randomInteger(min, max) {
   let random = min + Math.random() * (max + 1 - min);
   return Math.floor(random);

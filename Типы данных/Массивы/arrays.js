@@ -22,6 +22,7 @@ styles.unshift("Рэп", "Регги");
 console.log(styles);
 
 //************************************************** */
+
 // Сумма введённых чисел
 // Напишите функцию sumInput(), которая:
 // Просит пользователя ввести значения, используя prompt и сохраняет их в массив.
@@ -45,4 +46,21 @@ function sumPromptValues() {
   });
 
   return sum;
+}
+
+//************************************************** */
+
+// Подмассив наибольшей суммы
+// На входе массив чисел, например: arr = [1, -2, 3, 4, -9, 6].
+// Задача: найти непрерывный подмассив в arr, сумма элементов в котором максимальна.
+// Функция getMaxSubSum(arr) должна возвращать эту сумму.
+
+function getMaxSubSum(arr) {
+  let maxSum = arr[0];
+  let currentSum = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    currentSum = Math.max(arr[i], currentSum + arr[i]);
+    maxSum = Math.max(maxSum, currentSum);
+  }
+  return maxSum;
 }
